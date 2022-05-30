@@ -17,16 +17,17 @@ body {
     align-items: center;
     background-color: rgb(141, 141, 139);
     box-shadow: 0 0 0.1em 0;
-    opacity: 0.7;
+    z-index: 1;
 }
 
 .topMenu :hover {
     color: wheat;
 }
 
-.topMenu .topNavLeft {
+.topMenu .topNav {
     margin: 0;
     margin-left: 2em;
+    margin-right: 2em;
     padding: 0;
     height: 3em;
     display: flex;
@@ -43,39 +44,29 @@ body {
     gap: 2em;
 }
 
-.topMenu .topNavRight {
-    margin: 0;
-    margin-right: 2em;
-    padding: 0;
-    height: 3em;
-    display: flex;
-    align-items: center;
-    gap: 2em;
-}
-
 .topMenu ul li a {
     text-decoration: none;
     color: rgb(59, 54, 54);
 }
 
-.topNavLeft, #logo, .topNavRight, .topNavIcon {
+.topNav, #logo {
     list-style-type: none;
 }
 
 .mainDisplay {
     margin-top: 3em;
     position: relative;
-    width: 50%;
+    width: 100%;
     cursor: pointer;
 }
 
-.test {
+.mainImg {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.overlay {
+.mainDisplayText {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -88,58 +79,82 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.text {
+.mainText {
     color: wheat;
     position: absolute;
     top: 50%;
     left: 50%;
+    font-size: x-large;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.mainDisplay:hover .overlay {
+.mainText:hover {
+    text-decoration: underline;
+}
+
+.mainDisplay:hover .mainDisplayText {
     opacity: 1;
 }
-/* .mainDisplay img {
-    width: 100%;
-} */
 
-/* .mainDisplay {
-    margin-top: 3em;
-    width: 100%;
-    max-width: 50%;
+.miniDisplayOuterWrapper > * {
+display: inline-block;
+}
+
+.miniDisplay {
+    margin-top: 0.25em;
     position: relative;
-    display: flex;
-    vertical-align: middle;
-} */
-
-/* .mainDisplay h2 {
-    display: inline-table;
-    position: absolute;
-    margin: 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    vertical-align: middle;
-    color: rgb(144, 182, 189);
-    background: rgba (0, 0, 0, 0.6);
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    /* width: 25%; */
     cursor: pointer;
-} */
+    width: 30%;
+}
 
-/* .mainDisplay h2:hover {
+.miniDisplay:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.miniImg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.miniDisplayText {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.miniText {
+    color: wheat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: larger;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.miniText:hover {
+    text-decoration: underline;
+}
+
+.miniDisplay:hover .miniDisplayText {
     opacity: 1;
-} */
+}
 
 .botMenu {
     margin: 0;
@@ -166,4 +181,12 @@ body {
 .botMenu .socialIcon {
     display: flex;
     gap: 1em;
+}
+
+section h3, h4, h5, #ourStory {
+    text-align: center;
+}
+
+section h3 a {
+    text-decoration: none;
 }
