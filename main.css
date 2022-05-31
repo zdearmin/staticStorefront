@@ -1,6 +1,6 @@
+/* Comments below are for styling learned outside of class modules */
 body {
     margin: 0;
-    /* padding: 0; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: whitesmoke;
 }
@@ -15,13 +15,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(141, 141, 139);
+    background-color: rgba(105,125,62,255);
     box-shadow: 0 0 0.1em 0;
     z-index: 1;
 }
 
 .topMenu :hover {
-    color: wheat;
+    color: rgba(245, 222, 179, 0.349);
 }
 
 .topMenu .topNav {
@@ -32,13 +32,13 @@ body {
     height: 3em;
     display: flex;
     align-items: center;
+    text-align: center;
     gap: 2em;
 }
 
 .topMenu #logo {
     margin: 0;
     padding: 0;
-    height: 3em;
     display: flex;
     align-items: center;
     gap: 2em;
@@ -46,7 +46,7 @@ body {
 
 .topMenu ul li a {
     text-decoration: none;
-    color: rgb(59, 54, 54);
+    color: rgb(36, 34, 34);
 }
 
 .topNav, #logo {
@@ -75,23 +75,22 @@ body {
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
+    transition: .5s ease; /* This transition in combination with the .mainDisplay:hover .mainDisplayText {opacity: 1;} below is was gives the image their shade and text when you hover over them. The transition ease defines how quick or slow the effect will happen, represented in seconds (s). The {opacity: 1;} defines the opacity of the shade overlaid on the image. All of this was accomplished by making the .mainDisplayText, which is overlaid on the .mainImg class, a height and width of 100%. Within the .mainDisplayText class is the .mainText class which holds the actual text you see when you hover. */
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.mainText {
+.mainText a { /* Text shown when you hover over images */
     color: wheat;
     position: absolute;
     top: 50%;
     left: 50%;
     font-size: x-large;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* The transform: translate style moves the text or other elements to the center of the container */  
     text-align: center;
+    text-decoration: none;
 }
 
-.mainText:hover {
+.mainText a:hover {
     text-decoration: underline;
 }
 
@@ -100,21 +99,14 @@ body {
 }
 
 .miniDisplayOuterWrapper > * {
-display: inline-block;
+display: inline-block; /* The > (greater than) selector is applied to children elements of another element. In this case, .miniDisplayOuterWrapper is the parent and * represents the child. As for *, it embodies all elements of the html. So with this selector, whatever style is applied to the class .miniDisplayOuterWrapper, it will also be applied to all children of this class. */
 }
 
 .miniDisplay {
     margin-top: 0.25em;
     position: relative;
-    /* width: 25%; */
     cursor: pointer;
-    width: 30%;
-}
-
-.miniDisplay:after {
-    content: "";
-    clear: both;
-    display: table;
+    width: 33%;
 }
 
 .miniImg {
@@ -123,7 +115,7 @@ display: inline-block;
     height: auto;
 }
 
-.miniDisplayText {
+.miniDisplayText { /* Explanation for transform used here can be found above for the .mainDisplay class */
     position: absolute;
     top: 0;
     bottom: 0;
@@ -136,19 +128,18 @@ display: inline-block;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.miniText {
+.miniText a {
     color: wheat;
     position: absolute;
     top: 50%;
     left: 50%;
     font-size: larger;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    text-decoration: none;
 }
 
-.miniText:hover {
+.miniText a:hover {
     text-decoration: underline;
 }
 
@@ -156,14 +147,75 @@ display: inline-block;
     opacity: 1;
 }
 
+#reviewHeader, #newsHeader {
+    text-align: center;
+    margin-bottom: 0;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+.reviewWrapper, .newsWrapper {
+    display: flex;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+#reviewText, #newsText {
+    text-align: center;
+    width: 100%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.aboutWrapper h3, h5, #ourStory {
+    text-align: center;
+}
+
+.aboutWrapper h3 a {
+    text-decoration: none;
+}
+
 .botMenu {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 5em;
+    width: 100%;
+    height: 100%;
     display: flex;
-    position: fixed;
-    background-color: rgb(152, 183, 248);
+    background-color: #b5aa71;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialIcon, .botNav {
+    display: flex;
+    gap: 1em;
+    padding: 0;
+    margin: 1em;
+    margin-left: 2em;
+    text-align: center;
+}
+
+.submit {
+    margin: 1em;
+    margin-right: 2em;
+}
+
+form input {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0.5em;
+    padding: 0;
+    border: none;
+    border-radius: 0.25em;
+    height: 2em;
+}
+
+form input[type=submit] {
+    cursor: pointer;
+}
+
+form input[type=submit]:hover {
+    background-color: wheat;
 }
 
 .botMenu:hover {
@@ -174,19 +226,11 @@ display: inline-block;
     list-style-type: none;
 }
 
+.botMenu ul li a {
+    text-decoration: none;
+    color: rgb(36, 34, 34);
+}
+
 .botMenu ul li a:hover {
     color: wheat;
-}
-
-.botMenu .socialIcon {
-    display: flex;
-    gap: 1em;
-}
-
-section h3, h4, h5, #ourStory {
-    text-align: center;
-}
-
-section h3 a {
-    text-decoration: none;
 }
