@@ -1,12 +1,70 @@
 /* Comments below are for styling learned outside of class modules */
 body {
     margin: 0;
+    width: 100vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: whitesmoke;
 }
 
-.topMenu {
+/* The :root can have variables set to it that can then be referenced later on. e.g. This variable will save you from having to change every instance you used this color individually. Instead you can just change the color here and it will apply all instances of the --textColor.  */
+:root {
+    --textColor: rgb(36, 34, 34);
+}
+
+#popupOverlay {
+    top: 0;
+    left: 0;
+    position: fixed;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0.7;
+    z-index: 1;
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    display: none;
+    z-index: 2;
+}
+
+.popupText {
+    position: relative;
+    width: 25%;
+    max-width: 550px;
+    min-width: 200px;
+    margin: auto;
+    margin-top: 10em;
+    padding: 0.1em 1.25em 0.1em 1.25em;
+    background-color: whitesmoke;
+    z-index: 3;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0;
+}
+
+.popupText a {
+    text-decoration: none;
+}
+
+.popupText p {
+    clear: both;
+    color: var(--textColor);
+    font-size: 20px;
+}
+
+.popupText p a {
+    color: var(--textColor);
+    font-weight: bold;
+}
+
+.popupText p a:hover {
+    text-decoration: underline;
+}
+
+.topMenu {
+    width: 100vw;
     height: 3em;
     margin: 0;
     top: 0;
@@ -39,6 +97,7 @@ body {
 .topMenu #logo {
     margin: 0;
     padding: 0;
+    padding-top: 0.25em;
     display: flex;
     align-items: center;
     gap: 2em;
@@ -46,23 +105,27 @@ body {
 
 .topMenu ul li a {
     text-decoration: none;
-    color: rgb(36, 34, 34);
+    color: var(--textColor);
 }
 
 .topNav, #logo {
     list-style-type: none;
 }
 
+.topMenu .icon {
+    display: none;
+}
+
 .mainDisplay {
     margin-top: 3em;
     position: relative;
-    width: 100%;
+    width: 100vw;
     cursor: pointer;
 }
 
 .mainImg {
     display: block;
-    width: 100%;
+    width: 100vw;
     height: auto;
 }
 
@@ -73,7 +136,7 @@ body {
     left: 0;
     right: 0;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     opacity: 0;
     transition: .5s ease; /* This transition in combination with the .mainDisplay:hover .mainDisplayText {opacity: 1;} below is was gives the image their shade and text when you hover over them. The transition ease defines how quick or slow the effect will happen, represented in seconds (s). The {opacity: 1;} defines the opacity of the shade overlaid on the image. All of this was accomplished by making the .mainDisplayText, which is overlaid on the .mainImg class, a height and width of 100%. Within the .mainDisplayText class is the .mainText class which holds the actual text you see when you hover. */
     background-color: rgba(0, 0, 0, 0.6);
@@ -106,12 +169,12 @@ display: inline-block; /* The > (greater than) selector is applied to children e
     margin-top: 0.25em;
     position: relative;
     cursor: pointer;
-    width: 33%;
+    width: 33vw;
 }
 
 .miniImg {
     display: block;
-    width: 100%;
+    width: 33vw;
     height: auto;
 }
 
@@ -122,7 +185,7 @@ display: inline-block; /* The > (greater than) selector is applied to children e
     left: 0;
     right: 0;
     height: 100%;
-    width: 100%;
+    width: 33vw;
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(0, 0, 0, 0.6);
@@ -147,38 +210,47 @@ display: inline-block; /* The > (greater than) selector is applied to children e
     opacity: 1;
 }
 
-#reviewHeader, #newsHeader {
+#reviewHeader, #newsHeader, #storyHeader {
     text-align: center;
     margin-bottom: 0;
+    margin-top: 2em;
     margin-left: 0.25em;
     margin-right: 0.25em;
+    color: var(--textColor);
 }
 
-.reviewWrapper, .newsWrapper {
+.reviewWrapper, .newsWrapper, .aboutWrapper {
     display: flex;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    gap: 1em;
 }
 
-#reviewText, #newsText {
+.checked {
+    color: orange;
+}
+
+#reviewText, #newsText, #storyText {
     text-align: center;
-    width: 100%;
+    width: 100vw;
     margin-left: 0.5em;
     margin-right: 0.5em;
+    color: var(--textColor);
 }
 
-.aboutWrapper h3, h5, #ourStory {
+h3 a, h5 {
     text-align: center;
-}
-
-.aboutWrapper h3 a {
     text-decoration: none;
+    color: var(--textColor);
+    margin-top: 0;
 }
 
 .botMenu {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     background-color: #b5aa71;
@@ -188,7 +260,7 @@ display: inline-block; /* The > (greater than) selector is applied to children e
 
 .socialIcon, .botNav {
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     padding: 0;
     margin: 1em;
     margin-left: 2em;
@@ -218,19 +290,100 @@ form input[type=submit]:hover {
     background-color: wheat;
 }
 
-.botMenu:hover {
-    color: white;
-}
-
 .botMenu ul li {
     list-style-type: none;
 }
 
 .botMenu ul li a {
     text-decoration: none;
-    color: rgb(36, 34, 34);
+    color: var(--textColor);
+    font-size: small;
 }
 
 .botMenu ul li a:hover {
     color: wheat;
+}
+
+/* @media screen and (max-width) can be used to adjust elements on the html page depending on the size of the screen it is being used for. This allows the page to have all elements properly display as you shrink and/or expand the browser window. */
+@media screen and (max-width: 860px) {
+    .topMenu {
+        display: flex;
+        justify-content: none;
+        align-items: center;
+    }
+    .topMenu .topNav #navList {
+        display: none;
+    }
+    .topMenu .icon {
+        display: flex;
+        position: absolute;
+        float: left;
+        padding-left: 0.25em;
+        font-size: x-large;
+        text-decoration: none;
+        color: rgb(36, 34, 34);
+    }
+    .topMenu #logo {
+        margin-top: 0.25em;
+        margin-left: 3.75em;
+    }
+    .topMenu .topNav {
+        margin-left: 0;
+        margin-right: 0.5em;
+        padding-right: 0;
+        gap: 1em;
+    }
+}
+
+@media screen and (max-width: 1232px) {
+    .miniDisplayOuterWrapper {
+        display: block;
+        margin-left: 0.19em;
+        margin-right: 0.15em;
+    }
+    .miniDisplay {
+        width: 48.5vw;
+    }
+    .miniDisplay .miniImg {
+        width: 48.5vw;
+    }
+    .miniDisplayText {
+        width: 48.5vw;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .botMenu {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+    .botMenu .socialIcon {
+        justify-content: center;
+        padding-top: 1em;
+    }
+    .botMenu .botNav {
+        align-items: center;
+        justify-content: center;
+        padding-right: 2em;
+        font-size: x-small;
+    }
+    .submit {
+        margin-top: 2em;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .reviewWrapper, .newsWrapper, .aboutWrapper {
+        margin: 0;
+        width: 100vw;
+    }
+    #reviewHeader, #newsHeader, #storyHeader {
+        font-size: medium;
+    }
+    #reviewText, #newsText, #storyText  {
+        font-size: small;
+    }
 }

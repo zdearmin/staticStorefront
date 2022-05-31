@@ -5,99 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>X-Step Shoes</title>
 </head>
 <body>
+    <div class='popup'>
+        <div class='popupText'>
+            <h1>Hello!</h1>
+                <p>
+                    Welcome to X-Step Shoes, a completely fictionary company. Enjoy the site!
+                    <br/>
+                    <br/>
+                    <a href='' class='close'>Close</a>
+                </p>
+        </div>
+    </div>
     <header>
         <nav class="topMenu">
             <ul class="topNav">
-                <li><a href="#men">Men</a></li>
-                <li><a href="#women">Women</a></li>
-                <li><a href="#youth">Youth</a></li>
-                <li><a href="#shopAll">Shop All</a></li>
+                <li id="navList"><a href="#men">Men</a></li>
+                <li id="navList"><a href="#women">Women</a></li>
+                <li id="navList"><a href="#youth">Youth</a></li>
+                <li id="navList"><a href="#shopAll">Shop All</a></li>
             </ul>
             <ul id="logo">
                 <li><a href="#home"><img src="./assets/x-stepLogo.png" alt="X-Step Shoes Logo" width="175em" height="175em"></a></li>
             </ul>
             <ul class="topNav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#account">Account</a></li>
-                <li><a href="#"><img src="./assets/searchIcon48px-2.png" alt="Search Icon" width="25" height="25"></a></li>
-                <li><a href="#"><img src="./assets/cartIcon32px.png" alt="Cart Icon" width="25" height="25"></a></li>
+                <li id="navList"><a href="#home">Home</a></li>
+                <li id="navList"><a href="#about">About</a></li>
+                <li id="navList"><a href="#account">Account</a></li>
+                <li><a href="#search"><img src="./assets/searchIcon48px-2.png" alt="Search Icon" width="25" height="25"></a></li>
+                <li><a href="#cart"><img src="./assets/cartIcon32px.png" alt="Cart Icon" width="25" height="25"></a></li>
             </ul>
+            <a href="#navList" class="icon">&#9776;</a>
         </nav>
     </header>
     <div class="mainDisplay">
-        <img class="mainImg" src="./assets/stock1.jpg" alt="New Arrivals">
+        <img class="mainImg" src="./assets/newArrivalsImg.jpg" alt="New Arrivals">
         <div class="mainDisplayText">
             <div class="mainText"><a href="#newArrivals">New Arrivals</a></div>
         </div>
     </div>
     <div class="miniDisplayOuterWrapper">
         <div class="miniDisplay">
-            <img class="miniImg" src="./assets/stock1.jpg" alt="New Arrivals">
+            <img class="miniImg" src="./assets/menImg.webp" alt="Men">
             <div class="miniDisplayText">
                 <div class="miniText"><a href="#men">Men</a></div>
             </div>
         </div>
         <div class="miniDisplay">
-            <img class="miniImg" src="./assets/stock1.jpg" alt="New Arrivals">
+            <img class="miniImg" src="./assets/womenImg.jpg" alt="Women">
             <div class="miniDisplayText">
                 <div class="miniText"><a href="#women">Women</a></div>
             </div>
         </div>
         <div class="miniDisplay">
-            <img class="miniImg" src="./assets/stock1.jpg" alt="New Arrivals">
+            <img class="miniImg" src="./assets/youthImg.jpg" alt="Youth">
             <div class="miniDisplayText">
                 <div class="miniText"><a href="#youth">Youth</a></div>
             </div>
         </div>
         <div class="miniDisplay">
-            <img class="miniImg" src="./assets/stock1.jpg" alt="New Arrivals">
+            <img class="miniImg" src="./assets/onSaleImg.jpg" alt="On Sale">
             <div class="miniDisplayText">
                 <div class="miniText"><a href="#onSale">On Sale</a></div>
             </div>
         </div>
         <div class="miniDisplay">
-            <img class="miniImg" src="./assets/stock1.jpg" alt="New Arrivals">
+            <img class="miniImg" src="./assets/onTourImg.webp" alt="On Tour">
             <div class="miniDisplayText">
                 <div class="miniText"><a href="#onTour">On Tour</a></div>
             </div>
         </div>
         <div class="miniDisplay">
-            <img class="miniImg" src="./assets/stock1.jpg" alt="New Arrivals">
+            <img class="miniImg" src="./assets/springCollectionImg.jpg" alt="Spring Collection">
             <div class="miniDisplayText">
                 <div class="miniText"><a href="#springCollection">Spring Collection</a></div>
             </div>
         </div>
     </div>
-    <h4 id="reviewHeader">Reviews</h4>
+    <h3 id="reviewHeader"><a href="#reviews">Reviews</a></h3>
     <article class="reviewWrapper">
-        <p id="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<i> - Jane Doe, May 2022</i></p>
-        <p id="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<i> - Jane Doe, May 2022</i></p>
-        <p id="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<i> - Jane Doe, May 2022</i></p>
-        <p id="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<i> - Jane Doe, May 2022</i></p>
+        <p id="reviewText">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <br/>
+            Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters.<br/><i> - A. Pirate, June 1657</i></p>
+        <p id="reviewText">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <br/>
+            Mom always taught us to curl up in a ball and remain motionless when confronted. <br/><i> - Bluth, March 2004</i></p>
+        <p id="reviewText">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <br/>
+            Meggings mumblecore jean shorts pickled seitan. Wolf cliche four dollar toast tote bag XOXO fam swag butcher cornhole hoodie man braid anim esse nisi.<br/><i> - Anonymous, May 2022</i></p>
+        <p id="reviewText">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <br/>
+            You lived before you met me?! Eeeee! Now say "nuclear wessels"! Spare me your space age technobabble, Attila the Hun!<br/><i> - Zapp Brannigan, January 2003</i></p>
     </article>
     <hr/>
-    <h4 id="newsHeader">Latest News</h4>
+    <h3 id="newsHeader"><a href="#latestNews">Latest News</a></h3>
     <article class="newsWrapper">
-        <p id="newsText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue eget arcu dictum varius duis at consectetur.</p>
-        <p id="newsText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue eget arcu dictum varius duis at consectetur.</p>
+        <p id="newsText"><i><b>PDGA</b></i><br/>May 23, 2022<br/><br/>Gathered by gravity how far away culture decipherment laws of physics permanence of the stars. Extraplanetary extraordinary claims require extraordinary evidence intelligent beings the sky calls to us Rig Veda made in the interiors of collapsing stars. Across the centuries the sky calls to us the only home we've ever known descended from astronomers citizens of distant epochs a very small stage in a vast cosmic arena.<br/><br/>Sea of Tranquility bits of moving fluff not a sunrise but a galaxyrise emerged into consciousness star stuff harvesting star light vanquish the impossible and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+        <p id="newsText"><i><b>Tournaments</b></i><br/>May 31, 2022<br/><br/>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris.<br/><br/>Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
     </article>
     <hr/>
+    <h3 id="storyHeader"><a href="#ourStory">Our Story</a></h3>
     <section class="aboutWrapper">
-        <h3><a href="#ourStory">Our Story</a></h3>
-        <p id="ourStory">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue eget arcu dictum varius duis at consectetur.</p>
-        <h5><i>CEO & Founder - Zach Dearmin</i></h5>
+        <p id="storyText">After I ran into Helen at a restaurant, I realized she was just office pretty start procrastinating 2 hours get to do work while procrastinating open book pretend to read while manager stands and watches silently nobody is looking quick do your web search manager caught you and you are fured for get in the driver's seat, moving the goalposts I have zero cycles for this.<br/><br/>We need to crystallize a plan those options are already baked in with this model execute . Poop. Run it up the flag pole mobile friendly, for level the playing field turn the ship and we need a recap by eod, cob or whatever comes first so time to open the kimono. Cross sabers come up with something buzzworthy, nor it's a simple lift and shift job. Radical candor green technology and climate change move the needle, or encourage & support business growth yet put your feelers out, and onward and upward, productize the deliverables and focus on the bottom line root-and-branch review.<br/><br/>Tread it daily prepare yourself to swim with the sharks. Synergestic actionables time to open the kimono so quick sync yet make it look like digital, or into the weeds, for we need evergreen content. Strategic staircase are we in agreeance locked and loaded, churning anomalies or it's not hard guys yet powerpoint Bunny turn the ship. Come up with something buzzworthy circle back around for low-hanging fruit organic growth, nor this medium needs to be more dynamic.</p>
     </section>
+    <h5><i>CEO & Founder - Zach Dearmin</i></h5>
     <footer class="botMenu">
         <ul class="socialIcon">
-            <li><a href="#"><img src="./assets/fbIcon64px.png" alt="Facebook Icon" width="25" height="25"></a></li>
-            <li><a href="#"><img src="./assets/igIcon64px.png" alt="Instagram Icon" width="25" height="25"></a></li>
-            <li><a href="#"><img src="./assets/twiIcon64px.png" alt="Twitter Icon" width="25" height="25"></a></li>
-            <li><a href="#"><img src="./assets/ytIcon64px.png" alt="YouTube Icon" width="25" height="25"></a></li>
-            <li><a href="#"><img src="./assets/pinIcon64px.png" alt="Pinterest Icon" width="25" height="25"></a></li>
+            <li><a href="#facebook"><img src="./assets/fbIcon64px.png" alt="Facebook Icon" width="25" height="25"></a></li>
+            <li><a href="#instagram"><img src="./assets/igIcon64px.png" alt="Instagram Icon" width="25" height="25"></a></li>
+            <li><a href="#twitter"><img src="./assets/twiIcon64px.png" alt="Twitter Icon" width="25" height="25"></a></li>
+            <li><a href="#youtube"><img src="./assets/ytIcon64px.png" alt="YouTube Icon" width="25" height="25"></a></li>
+            <li><a href="#pinterest"><img src="./assets/pinIcon64px.png" alt="Pinterest Icon" width="25" height="25"></a></li>
         </ul>
         <ul class="botNav">
             <li><a href="#home">&copy 2022 X-Step Shoes, Inc. All Rights Reserved.</a></li>
@@ -111,5 +152,26 @@
             <input type="submit" value="Submit">
         </form>
     </footer>
+    <!-- This script is from a JavaScript library (jquery), referenced for the popup box. As required by JavaScript, the script tags are added at the end of the body, allowing for the other HTML elements to load before JavaScript loads -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type='text/javascript'>
+        // Calling the function named using the JQuery library ($)
+        $(function(){
+        // Assigning the overlay variable with the id popupOverlay 
+        var overlay = $('<div id="popupOverlay"></div>');
+        // Adding the show effect to the variable overlay. will show the varible, added to the HTML body by using the `appendTo(document.body)`
+        overlay.show();
+        overlay.appendTo(document.body);
+        // The `popup class` will appear as a result of the .show effect, and will be hidden if the `close class` is .click (clicked)
+        $('.popup').show();
+        $('.close').click(function(){
+        $('.popup').hide();
+        // Same as above, applies the .hide effect to the HTML (document.body) body, therefore removing the popup window
+        overlay.appendTo(document.body).remove();
+        // The return is false because document.body will always return true if the body is loaded, and in this case it would also return the popup if true. So everytime you hit close the window would immediately open again if return is true
+        return false;
+        });
+        });
+        </script>
 </body>
 </html>
